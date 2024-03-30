@@ -1,10 +1,9 @@
-import moment from 'moment';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 
-const TaskColumn = ({ handleTaskClick, status, tasks, sortedTasks }) => {
+const TaskColumn = ({ handleTaskClick, status, sortedTasks }) => {
 
-    
+
     const truncatedDescription = (desc) => {
         const td = desc.length > 10 ? `${desc.slice(0, 60)}...` : desc;
         return td
@@ -32,7 +31,7 @@ const TaskColumn = ({ handleTaskClick, status, tasks, sortedTasks }) => {
 
                 }
                 {
-                    tasks.length == 0 && (<p className='flex justify-center w-full text-xs text-slate-500 mt-10' >No pending tasks to display</p>)
+                    sortedTasks.length == 0 && (<p className='flex justify-center w-full text-xs text-slate-500 mt-10' >No pending tasks to display</p>)
                 }
             </ol>
         </div>

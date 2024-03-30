@@ -4,6 +4,7 @@ import TaskColumn from './TaskColumn';
 import CreateTask from './CreateTask';
 import TaskDetails from './TaskDetails';
 import moment from 'moment';
+import { demotasks } from '../demotasks/DemoTasks';
 
 
 const Tasks = () => {
@@ -29,7 +30,11 @@ const Tasks = () => {
 
     const [tasks, setTasks] = useState(() => {
         const storedTasks = localStorage.getItem('tasks');
-        return storedTasks ? JSON.parse(storedTasks) : [];
+        if (!storedTasks) {
+            localStorage.setItem('tasks', JSON.stringify(demotasks))
+            return demotasks;
+        }
+        return JSON.parse(storedTasks);
     });
 
     const [quote, setQuote] = useState(() => {
@@ -41,6 +46,13 @@ const Tasks = () => {
         const storedTasks = localStorage.getItem('tasks');
         if (storedTasks) {
             setTasks(JSON.parse(storedTasks));
+        }
+        else {
+            console.log("demo : ", demotasks)
+            // If tasks do not exist, use the default set of tasks
+            setTasks(demotasks);
+            // Store default tasks in local storage for future use
+            localStorage.setItem('tasks', JSON.stringify(demotasks));
         }
     }, []);
 
@@ -142,7 +154,7 @@ const Tasks = () => {
 
     return (
 
-        <div className='flex flex-col box-border px-20 py-10 h-full min-h-100' >
+        <div className='flex flex-col box-border lg:px-20 py-10 h-full min-h-100 md:px-5 sm:px-5' >
             <div className='flex flex-row ' >
                 {
                     !editQuote ? <p onDoubleClick={() => setEditQuote(true)} >{quote} <i class="fa-solid fa-i-cursor text-md ml-5 text-slate-500"></i></p> : (

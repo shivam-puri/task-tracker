@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className=' flex justify-between py-8 pb-12 px-20 h-20 border-b dark:border-slate-700 border-zinc-400' >
+    <div className='flex justify-between py-8 pb-12 px-20 h-20 border-b dark:border-slate-700 border-slate-300' >
       <p className='cursor-pointer' ><i class="fa-solid fa-check-double"></i>&nbsp;task_tracker</p>
       <button onClick={handleThemeSwitch} >
         {theme == "light" ? <span className='text-xs flex items-center rounded-full' ><i className="fa-regular fa-sun text-xl"></i>&nbsp;light</span> : <span className='text-xs flex items-center rounded-full' ><i className="fa-regular fa-moon text-xl"></i>&nbsp;dark</span>}

@@ -53,7 +53,7 @@ const TaskDetails = ({ selectedTask, handleDeleteTask, tasks, setTasks, setSelec
                             <input
                                 type='text' defaultValue={newTitle || selectedTask.title} value={newTitle}
                                 onChange={(e) => setNewTitle(e.target.value)}
-                                className='  flex flex-1 bg-transparent focus:outline-none outline-none border-b border-slate-700  w-full'
+                                className='  flex flex-1 bg-transparent focus:outline-none outline-none border-b border-slate-300 dark:border-slate-700  w-full'
                             />
 
                             <button className='ml-7 mr-2' onClick={() => setEditTitle(false)} ><i class="fa-solid fa-check"></i></button>
@@ -63,7 +63,7 @@ const TaskDetails = ({ selectedTask, handleDeleteTask, tasks, setTasks, setSelec
 
 
             </h1>
-            <p className='text-xs leading-5 text-slate-300 mb-5' >start_date : {selectedTask.start_date} <br />
+            <p className='text-xs leading-5 dark:text-slate-300 mb-5' >start_date : {selectedTask.start_date} <br />
                 {
                     selectedTask.end_date && (`end_date : ${selectedTask.end_date}`)
 
@@ -87,14 +87,14 @@ const TaskDetails = ({ selectedTask, handleDeleteTask, tasks, setTasks, setSelec
                 priority :  {selectedTask.priority}  </p>
 
 
-            <p onDoubleClick={handleEditDesc} className='text-xs leading-5 text-slate-500' >
+            <p onDoubleClick={handleEditDesc} className='text-xs leading-5 dark:text-slate-500' >
                 {
                     !editDesc ? (newDescription || <span>{selectedTask.description} <i class="fa-solid fa-i-cursor text-xs text-slate-500 "></i> </span>) : (
                         <div className='flex w-full' >
                             <textarea
                                 defaultValue={newDescription || selectedTask.description} value={newDescription}
                                 onChange={(e) => setNewDescription(e.target.value)}
-                                className='  flex flex-1 bg-transparent focus:outline-none outline-none border-b border-slate-700  w-full'
+                                className='  flex flex-1 bg-transparent focus:outline-none outline-none border-b dark:border-slate-700 border-slate-300  w-full'
                             />
 
                             <button className='ml-7 mr-2' onClick={() => setEditDesc(false)} ><i class="fa-solid fa-check"></i></button>
@@ -217,8 +217,8 @@ const TaskDetails = ({ selectedTask, handleDeleteTask, tasks, setTasks, setSelec
             )}
 
             <div className='flex w-full justify-end' >
-                <button disabled={!priority && !status && !newTitle && !newDescription} onClick={() => handleSaveChanges(selectedTask.id)} className={`text-xs mt-5 p-2 border border-slate-700 rounded-lg  min-w-20 mr-3 ${!priority && !status && !newTitle && !newDescription ? "opacity-40 cursor-not-allowed" : ""}`} ><i class="fa-solid fa-pen"></i>&nbsp;save_changes</button>
-                <button onClick={() => handleDeleteTask(selectedTask.id)} className='text-xs mt-5 p-2 border border-slate-700 rounded-lg  min-w-20  ' ><i class="fa-solid fa-trash"></i>&nbsp;delete_task</button>
+                <button disabled={!priority && !status && !newTitle && !newDescription} onClick={() => handleSaveChanges(selectedTask.id)} className={`text-xs mt-5 p-2 border border-slate-400 dark:border-slate-700 rounded-lg  min-w-20 mr-3 ${!priority && !status && !newTitle && !newDescription ? "opacity-40 cursor-not-allowed" : ""}`} ><i class="fa-solid fa-pen"></i>&nbsp;save_changes</button>
+                <button onClick={() => handleDeleteTask(selectedTask.id)} className='text-xs mt-5 p-2 border dark:border-slate-700 border-slate-400 rounded-lg  min-w-20  ' ><i class="fa-solid fa-trash"></i>&nbsp;delete_task</button>
             </div></div>
     )
 }

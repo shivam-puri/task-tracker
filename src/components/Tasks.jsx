@@ -123,10 +123,10 @@ const Tasks = () => {
 
     return (
 
-        <div className='flex flex-col box-border lg:px-20 py-10 h-full min-h-100 md:px-5 sm:px-5' >
+        <div className='flex flex-col box-border lg:px-20 py-10 h-full min-h-100 max-[1000px]:px-5  max-[370px]:py-5 ' >
             <div className='flex flex-row ' >
                 {
-                    !editQuote ? <p onDoubleClick={() => setEditQuote(true)} >{quote} <i class="fa-solid fa-i-cursor text-md ml-5 text-slate-500"></i></p> : (
+                    !editQuote ? <p className=' max-[370px]:text-sm' onDoubleClick={() => setEditQuote(true)} >{quote} <i class="fa-solid fa-i-cursor text-md ml-5 text-slate-500  max-[370px]:text-sm"></i></p> : (
                         <div className='flex w-full mb-5'>
                             <input className='flex flex-1 w-full bg-transparent border-b border-slate-700 outline-none focus:outline-none pb-2' defaultValue={quote} value={quote} onChange={(e) => setQuote(e.target.value)} />
 
@@ -136,10 +136,10 @@ const Tasks = () => {
                 }
             </div>
 
-            <div className='flex w-full justify-between mt-10' >
+            <div className='flex w-full justify-between mt-10  max-[370px]:mt-5  max-[370px]:flex-col' >
 
-                <div className='flex border-b border-l pl-1 border-slate-300 dark:border-slate-600 rounded-md' >
-                    <div className='flex items-center' >
+                <div className='flex border-b border-l  max-[370px]:border-l-0  max-[370px]:rounded-none  max-[370px]:pb-2  max-[370px]:mb-3 pl-1 border-slate-300 dark:border-slate-600 rounded-md  max-[370px]:mt-0' >
+                    <div className='flex items-center ' >
                         <i class="fa-solid fa-filter mr-2 text-xs text-slate-500  dark:text-slate-500"></i>
                         <input
                             value={selectedAssignee}
@@ -147,7 +147,7 @@ const Tasks = () => {
                             type="text" className='text-xs flex mr-5 bg-transparent focus:outline-none outline-none w-36' placeholder={`filter by assignee..`} />
                     </div>
                 </div>
-                <div className='flex' >
+                <div className='flex   max-[370px]:flex-1  max-[370px]:justify-end ' >
 
                     <div className="relative inline-block text-left">
                         <button onClick={() => setDropdown(!dropdown)} type="button" className="inline-flex justify-center items-center w-full text-xs dark:text-slate-400 focus:outline-none outline-none" id="options-menu" aria-haspopup="true" aria-expanded="true">
@@ -180,7 +180,7 @@ const Tasks = () => {
 
             </div>
 
-            <div className='flex mt-10 w-full justify-around overflow-x-auto pb-20 ' >
+            <div className='flex mt-10  max-[370px]:mt-4 w-full justify-around overflow-x-auto pb-20 ' >
 
                 <TaskColumn sortedTasks={sortedTasks} handleTaskClick={handleTaskClick} status={"pending"} />
                 <TaskColumn sortedTasks={sortedTasks} handleTaskClick={handleTaskClick} status={"in progress"} />
@@ -190,7 +190,7 @@ const Tasks = () => {
 
             </div>
 
-            <button onClick={() => setCreateTask(true)} className='absolute bottom-20 right-20 z-10 border dark:border-slate-700 rounded-full text-xs  p-3 py-2 shadow-lg dark:bg-slate-700' > + add_task</button>
+            <button onClick={() => setCreateTask(true)} className='absolute bottom-20 right-20 z-10 border dark:border-slate-700 rounded-full text-xs  p-3 py-2 shadow-lg dark:bg-slate-700  max-[370px]:right-5  max-[370px]:bottom-5 ' > + add_task</button>
 
             {/* Open Task Modal */}
 

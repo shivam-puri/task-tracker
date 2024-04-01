@@ -7,8 +7,9 @@ const TaskColumn = ({ handleTaskClick, status, sortedTasks }) => {
     const truncatedDescription = (desc) => {
         const td = desc.length > 10 ? `${desc.slice(0, 60)}...` : desc;
         return td
-
     }
+
+
 
     return (
         <div className='flex min-w-60  flex-1 flex-col mr-2 border border-zinc-400 

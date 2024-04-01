@@ -15,7 +15,7 @@ const CreateTask = ({ setCreateTask, tasks, setTasks }) => {
             title: title,
             description: description,
             status: "pending",
-            start_date: moment(new Date('2024-04-04')).format('MMMM Do YYYY'),
+            start_date: moment(new Date()).format('MMMM Do YYYY'),
             priority: priority,
             assignee: assignee
 

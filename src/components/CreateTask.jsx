@@ -26,9 +26,9 @@ const CreateTask = ({ setCreateTask, tasks, setTasks }) => {
         setCreateTask(false)
         setPriority('low');
     };
-
+ 
     return (
-        <div className='flex w-full flex-col' >
+        <div className='flex w-full flex-col ' >
             <h1><i class="fa-solid fa-plus"></i>&nbsp;create a new task</h1>
             <input
                 className='mb-2 mt-5 bg-transparent focus:outline-none outline-none border dark:border-slate-700 border-slate-400 rounded-lg p-2 text-xs'

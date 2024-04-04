@@ -1,101 +1,156 @@
 export const demotasks = [
     {
-        id: 2,
-        title: "complete that DSA saver site.",
-        description: "Use the data-modal-backdrop=\"static\" data attribute to prevent the modal from closing when clicking outside of it. This can be used with situations where you want to force the user to choose an option such as a cookie notice or when taking a survey.",
-        status: "in progress",
-        start_date: "March 30th 2024",
-        priority: "low"
+        "id": 1,
+        "title": "User Authentication Integration",
+        "description": "Implement user authentication system using JWT tokens",
+        "status": "completed",
+        "start_date": "February 15th 2024",
+        "priority": "high",
+        "assignee": "shivam"
     },
+
     {
-        id: 4,
-        title: "Internship Assignment",
-        description: "Button component can be enabled/disabled by giving disabled property. To disable Button component, the disabled property can be set as true . The following example demonstrates Button in disabled state.",
-        status: "pending",
-        start_date: "March 30th 2024",
-        priority: "low"
-    },
-    {
-        id: 5,
-        title: "learn double click event.",
-        description: "The onDoubleClick event is a handler designed to capture and respond to double clicks on specific elements. It serves as an event listener that triggers a specified function when a user rapidly clicks on the associated element twice within a short time frame.",
-        status: "pending",
-        start_date: "March 30th 2024",
-        priority: "low"
-    },
-    {
-        id: 8,
-        title: "Just a task I wanted to add here. a long one to see if the title looks good..",
-        description: "The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.",
-      status: "deployed",
-        start_date: "March 30th 2024",
-        priority: "low"
-    },
-    {
-        id: 10,
-        title: "wow the UI looks so cool",
-        description: "You can also use variant modifiers to target media queries like responsive breakpoints, dark mode, prefers-reduced-motion, and more. For example, use md:leading-loose to apply the leading-loose utility at only medium screen sizes and above.",
-        status: "completed",
-        start_date: "March 30th 2024",
-        priority: "low",
-        end_date: "March 30th 2024"
-    },
-    {
-        id: 6,
-        title: "add filters and sorting methods",
-        description: "The onDoubleClick event is a handler designed to capture and respond to double clicks on specific elements. It serves as an event listener that triggers a specified function when a user rapidly clicks on the associated element twice within a short time frame.",
-        status: "in progress",
-        start_date: "March 30th 2024",
-        priority: "medium"
-    },
-    {
-        id: "2e184f87-c167-4c3f-aaa6-40e5737f34cb",
-        title: "new title added vro :)",
-        description: "this is new description and here the description is also editable isn't it beautiful?",
-        status: "pending",
-        start_date: "March 30th 2024",
-        priority: "medium",
-        end_date: null,
-        last_edited: "March 30th 2024"
-    },
-    {
-        id: 7,
-        title: "listen to krishnamurthi",
-        description: "The onDoubleClick event is a handler designed to capture and respond to double clicks on specific elements. It serves as an event listener that triggers a specified function when a user rapidly clicks on the associated element twice within a short time frame.",
-        status: "deferred",
-        start_date: "March 30th 2024",
-        priority: "high",
-        end_date: null,
-        last_edited: "March 30th 2024"
-    },
-    {
-        id: "1aee3469-055d-4cbe-adc5-028dbbb66c00",
-        title: "What is the basic philosophy of Krishnamurti?",
-        description: "He believed in total awareness as being essential for a free mind. Human beings always learned from their past, and it was important that they looked inwards and freed themselves from self-perpetuated torment. It was also necessary that they avoided repression.",
-      status: "deployed",
-        start_date: "January 1st 2023",
-        priority: "high",
-        end_date: null,
-        last_edited: "March 30th 2024"
-    },
-    {
-        id: "4f4d1a51-aab3-4923-b2c5-5fea9d18cbec",
-        title: "Rotate bro, Rotate.",
-        description: "If your transition performs better when rendered by the GPU instead of the CPU, you can force hardware acceleration by adding the transform-gpu utility",
-      status: "pending",
-        start_date: "April 4th 2024",
-        priority: "medium",
-        assignee: "shivam_puri"
-    },
-    {
-        id: "ced054c0-3eae-4ae5-a878-f6ae0293c908",
-        title: "sham ko dinner bananana hai.",
-        description: "You can also edit variant modifiers to target media queries like responsive breakpoints, dark mode, prefers-reduced-motion, and more. For example, use md:rotate-45 to apply the rotate-45 utility at only medium screen sizes and above.",
-        status: "completed",
-        start_date: "April 4th 2024",
-        priority: "medium",
-        assignee: "prakhar",
-        end_date: "March 30th 2024",
-        last_edited: "March 30th 2024"
+        "id": 2,
+        "title": "DSA Saver development",
+        "description": "Authentication system backend completed, backend routes for uploading and editing questions defined",
+        "status": "in progress",
+        "start_date": "March 30th 2024",
+        "priority": "medium",
+        "assignee": "shivam"
+
     }
+    ,
+    {
+        "id": 3,
+        "title": "Frontend Design Enhancement",
+        "description": "Improve UI/UX design for better user experience",
+        "status": "pending",
+        "start_date": "April 5th 2024",
+        "priority": "medium",
+        "assignee": "shivam"
+
+    }
+    ,
+    {
+        "id": 4,
+        "title": "Database Optimization",
+        "description": "Optimize database queries for faster performance",
+        "status": "in progress",
+        "start_date": "March 20th 2024",
+        "priority": "high",
+        "assignee": "shivam"
+
+    }
+    ,
+    {
+        "id": 5,
+        "title": "Bug Fixing",
+        "description": "Address reported bugs and issues",
+        "status": "completed",
+        "start_date": "March 10th 2024",
+        "priority": "high",
+        "assignee": "shashwat"
+    }
+    ,
+    {
+        "id": 6,
+        "title": "Deployment on Production Server",
+        "description": "Deploy application on production server for public access",
+        "status": "deployed",
+        "start_date": "April 10th 2024",
+        "priority": "high",
+        "assignee": "shashwat"
+    }
+    ,
+    {
+        "id": 7,
+        "title": "Performance Testing",
+        "description": "Conduct load testing to assess application performance under heavy traffic",
+        "status": "in progress",
+        "start_date": "April 1st 2024",
+        "priority": "medium",
+        "assignee": "shashwat"
+    }
+    ,
+    {
+        "id": 8,
+        "title": "Feature Development",
+        "description": "Implement new feature to allow users to customize profiles",
+        "status": "deferred",
+        "start_date": "March 25th 2024",
+        "priority": "medium",
+        "assignee": "manas"
+    }
+    ,
+    {
+        "id": 9,
+        "title": "Documentation Update",
+        "description": "Update project documentation with latest changes and features",
+        "status": "pending",
+        "start_date": "April 3rd 2024",
+        "priority": "low",
+        "assignee": "manas"
+    }
+    ,
+    {
+        "id": 10,
+        "title": "Security Audit",
+        "description": "Conduct security audit to identify and fix vulnerabilities",
+        "status": "in progress",
+        "start_date": "April 1st 2024",
+        "priority": "high",
+        "assignee": "manas"
+    }
+    ,
+    {
+        "id": 11,
+        "title": "Performance Optimization",
+        "description": "Optimize code and database queries for improved speed",
+        "status": "completed",
+        "start_date": "April 2nd 2024",
+        "priority": "high",
+        "assignee": "manas"
+    }
+    ,
+    {
+        "id": 12,
+        "title": "Client Meeting",
+        "description": "Discuss project updates and requirements with client",
+        "status": "completed",
+        "start_date": "March 28th 2024",
+        "priority": "medium",
+        "assignee": "ravi"
+    }
+    ,
+    {
+        "id": 13,
+        "title": "Backend Refactoring",
+        "description": "Refactor backend code for better maintainability",
+        "status": "in progress",
+        "start_date": "March 15th 2024",
+        "priority": "high",
+        "assignee": "ravi"
+    }
+    ,
+    {
+        "id": 14,
+        "title": "Client Feedback Incorporation",
+        "description": "Incorporate client feedback to improve application",
+        "status": "completed",
+        "start_date": "March 20th 2024",
+        "priority": "medium",
+        "assignee": "ravi"
+    }
+    ,
+    {
+        "id": 15,
+        "title": "Server Migration",
+        "description": "Migrate application to new server for better performance and scalability",
+        "status": "pending",
+        "start_date": "April 5th 2024",
+        "priority": "high",
+        "assignee": "ravi"
+    }
+
+
 ]
